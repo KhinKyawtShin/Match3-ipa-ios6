@@ -80,4 +80,14 @@ function endGame() {
     endGameEl.textContent = "Game Over! Your score is: " + score;
 }
 
-// RESTART GAME
+// home page
+// show highest score
+// start button
+
+// pop up game-over message
+// add a restart button
+// add a home button
+
+// add music
+
+// beautify overall
