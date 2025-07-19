@@ -37,15 +37,24 @@ for (let i = 0; i < width * height; i++) {
 
 // BASIC MATCHING LOGIC
 function clickTiles(tile) {
-    if (selectedTiles.includes(tile) || selectedTiles.length >= 3) return;
-    
-    tile.style.backgroundColor = "yellow"; // highlight selection
+    // If the tile is already selected, unselect it
+    if (selectedTiles.includes(tile)) {
+        tile.style.backgroundColor = ""; // remove highlight
+        selectedTiles = selectedTiles.filter(t => t !== tile); // remove from selection
+        return; // cancel logic
+    }
+
+    // If 3 tiles are already selected, no more can be selected until resolved
+    if (selectedTiles.length >= 3) return;
+
+    tile.style.backgroundColor = "yellow"; // highlight with opacity
     selectedTiles.push(tile);
 
     if (selectedTiles.length === 3) {
         checkForMatch();
     }
-    console.log("Tile clicked: " + tile);
+
+    console.log("Tile clicked:", tile);
 }
 
 function checkForMatch() {
@@ -55,7 +64,6 @@ function checkForMatch() {
     if (a.textContent === b.textContent && b.textContent === c.textContent) { //three tiles match
         score++;
         scoreEl.textContent = score;
-        console.log("Match! Score:", score);
         time += 3; // Add time reward
 
         selectedTiles.forEach(tile => { //clear matched tiles and refil
@@ -80,7 +88,7 @@ function endGame() {
     endGameEl.textContent = "Game Over! Your score is: " + score;
 }
 
-// home page
+// home page <done>
 // show highest score
 // start button
 
