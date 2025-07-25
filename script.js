@@ -1,7 +1,7 @@
 // DECLARING
 let score = 0;
 let selectedTiles = [];
-let time = 60;
+let time = 30;
 let timerEl = document.getElementById("timer");
 
 //TIMER LOGIC
@@ -19,10 +19,10 @@ let interval = setInterval(() => {
 
 // GRID LOGIC
 let gridEl = document.getElementById("grid");
-let colors = ["😃", "😄", "😁", "😆", "😅", "😂"];
+let colors = ["😧","😦","😃", "😄", "😁", "😆", "😅", "😂"];
 
-let width = 6;
-let height = 6; 
+let width = 5;
+let height = 5; 
 for (let i = 0; i < width * height; i++) {
     const tile = document.createElement('div');
     tile.classList.add('tile'); 
@@ -82,20 +82,21 @@ function checkForMatch() {
 }
 
 // END GAME LOGIC
-function endGame() {
+function endGame() { //pop up in general
     let endGameEl = document.getElementById("end-game");
     clearInterval(interval);
     endGameEl.textContent = "Game Over! Your score is: " + score;
+    if (score > (localStorage.getItem("highScore") || 0)) {
+        localStorage.setItem("highScore", score);
+    }
+
+    document.getElementById("finalScore").textContent = score;
+    document.getElementById("gameOverPopup").style.display = "flex";
+
 }
 
-// home page <done>
-// show highest score
-// start button
 
-// pop up game-over message
-// add a restart button
-// add a home button
 
 // add music
-
+// add sound effects
 // beautify overall

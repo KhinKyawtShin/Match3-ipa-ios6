@@ -1,0 +1,99 @@
+/* Home Page Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(#186c3e, #1e8a4f, #1e8a4f, #186c3e); 
+    background-blend-mode: overlay; 
+    height: 100vh;
+    margin: 0;
+    color: goldenrod;
+}
+
+#home-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#start-button, #score-button {
+    color: #1a3928;
+    background-color: goldenrod;
+    text-decoration: solid;
+}
+
+/* Game Page Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#186c3e, #1e8a4f, #1e8a4f, #186c3e); 
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.popup-content {
+    color: goldenrod;
+    background: none;
+    padding: 30px;
+    text-align: center;
+    max-width: 300px;
+}
+
+#timer-score {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#timer {
+    color: goldenrod;
+    margin-bottom: 10px;
+}
+
+#score {
+    color: goldenrod;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.tile {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+}
+
+#end-game {
+    margin-top: 10px;
+    color: goldenrod;
+}
+
+#game-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#restart-button, #home-button {
+    color: #1a3928;
+    background-color: goldenrod;
+    text-decoration: solid;
+}
