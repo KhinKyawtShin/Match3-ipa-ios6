@@ -99,7 +99,15 @@ function endGame() { //pop up in general
     });
 }
 
+// SCORE POPUP LOGIC
+function checkScore() {
+    const popup = document.getElementById("scorePopup");
+    const scoreDisplay = document.getElementById("highScoreValue"); 
+    const highScore = localStorage.getItem("highScore") || 0;
 
+    scoreDisplay.textContent = highScore;
+    popup.style.display = "flex";
+}
 
 // add music
 // add sound effects

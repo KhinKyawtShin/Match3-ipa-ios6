@@ -3,6 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;;
     background: linear-gradient(#186c3e, #1e8a4f, #1e8a4f, #186c3e); 
     background-blend-mode: overlay; 
     height: 100vh;

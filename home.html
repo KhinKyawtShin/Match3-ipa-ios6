@@ -5,9 +5,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Highest Score Pop Up -->
+    <div id="scorePopup" class="popup">
+        <div class="popup-content">
+            <h1>Your Highest Score</h2>
+
+            <p>Your Score: <span id="highScoreValue"></span></p>
+
+            <a href="home.html"><button id="home-button">Home</button></a>
+        </div>
+    </div>
+
+    <!-- Home Body -->
     <h1 id="title-text">Emoji Match</h1>
     <div id="home-buttons">
-      <button id="start-button" onclick="location.href='index.html'">Start Game</button>
+      <button id="start-button" onclick="location.href='index.html'">Start</button>
       <button id="score-button" onclick="checkScore()">Score</button>
     </div>
 </body>
