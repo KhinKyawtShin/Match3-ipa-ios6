@@ -93,6 +93,10 @@ function endGame() { //pop up in general
     document.getElementById("finalScore").textContent = score;
     document.getElementById("gameOverPopup").style.display = "flex";
 
+    //stop tappings after time's up
+    document.querySelectorAll('.title').forEach(tile => { //not really needed because of game over popup, but just in case
+        tile.style.pointerEvents = 'none';
+    });
 }
 
 
