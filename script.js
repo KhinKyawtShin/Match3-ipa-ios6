@@ -65,7 +65,7 @@ function goIntoGame() {
     window.location.href = 'index.html';
 }
 
-// TIMER LOGIC 
+// TIMER LOGIC
 function startGameTimer() {
     if (timerEl) {
         interval = setInterval(() => {
