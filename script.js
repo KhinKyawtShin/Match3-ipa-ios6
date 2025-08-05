@@ -251,3 +251,6 @@ if (document.getElementById("start-button")) {
         }
     });
 }
+
+//beautify pages
+//name --> matchmoji
